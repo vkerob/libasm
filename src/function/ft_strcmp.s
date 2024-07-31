@@ -7,9 +7,9 @@ global ft_strcmp
 	; rsi = s2
 
 	ft_strcmp:
+		xor rcx, rcx
 		cmp rdi, 0
         je check_s2
-		xor rcx, rcx
         jmp start_loop
 
 	check_s2:

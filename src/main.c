@@ -1,15 +1,18 @@
 #include "../include/libasm.h"
+#include <strings.h>
 
 
 void	test_ft_read()
 {
 	int		fd = open("Makefile", O_RDONLY);
-	size_t	count = 9;
+	size_t	count = 1;
 
-	char	*buf_read = malloc(sizeof(char) * count);
+	char	*buf_read = malloc(sizeof(char) * count + 1);
+	buf_read[count] = '\0';
 	ssize_t	return_value_read;
 
-	char	*buf_ft_read = malloc(sizeof(char) * count);
+	char	*buf_ft_read = malloc(sizeof(char) * count + 1);
+	buf_ft_read[count] = '\0';
 	ssize_t	return_value_ft_read;
 
 

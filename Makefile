@@ -1,8 +1,8 @@
 CC = gcc
 AS = nasm
 
-CFLAGS = -Wall -Wextra -Werror
-ASFLAGS = -f elf64
+CFLAGS = -Wall -Wextra -Werror -g
+ASFLAGS = -f elf64 -g
 
 SRCS_C = src/main.c
 SRCS_ASM = src/function/ft_strlen.s \
